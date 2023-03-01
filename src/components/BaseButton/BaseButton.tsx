@@ -12,9 +12,9 @@ const BaseButton = ({ title, onPress, ...rest }: IBaseButton) => {
     <View {...rest}>
       <TouchableOpacity
         onPress={onPress}
-        style={tw`flex-center p-4 bg-secondary rounded-full`}
+        style={tw`p-4 bg-secondary rounded-full`}
       >
-        <Text style={tw`flex-center text-center text-white text-lg font-bold`}>
+        <Text style={tw`text-center text-white text-lg font-bold`}>
           {title}
         </Text>
       </TouchableOpacity>

@@ -1,10 +1,18 @@
 import { ReservationCard, ReservationTitle } from "@components";
-import { tw } from "@shared";
-import { View } from "react-native";
+import { fadeIn, scrollUp, tw } from "@shared";
+import { useEffect, useRef, useState } from "react";
+import { Animated, View } from "react-native";
 
 const Confirmed = () => {
+  const [_, setShowAnimation] = useState(false);
+  const opacity = useRef(new Animated.Value(0)).current;
+  const scrollY = useRef(new Animated.Value(-30)).current;
+  useEffect(() => {
+    setShowAnimation(true);
+    Animated.parallel([fadeIn(opacity), scrollUp(scrollY)]).start();
+  }, []);
   return (
-    <View>
+    <Animated.View style={[{ opacity, transform: [{ translateY: scrollY }] }]}>
       <ReservationTitle
         style={tw`mt-1 mb-4`}
         state={"CONFIRMED"}
@@ -18,7 +26,7 @@ const Confirmed = () => {
         id={90374044}
         address="서울 강남구 강남대로 422 씨티빌딩 9층"
       />
-    </View>
+    </Animated.View>
   );
 };
 

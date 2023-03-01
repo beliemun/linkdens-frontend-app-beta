@@ -47,7 +47,7 @@ const SelectDate = ({ setState }: ISelectDate) => {
         }}
       />
       <BaseButton
-        style={tw`mt-4`}
+        style={tw`flex mt-4`}
         title="날짜 선택 완료"
         onPress={() => setState("SELECT_TIME")}
       />

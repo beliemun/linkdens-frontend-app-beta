@@ -1,10 +1,19 @@
-import { ReservationCard } from "@components";
+import { Header, RadialGraph, ReservationCard } from "@components";
+import Separator from "@components/Separator";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { tw } from "@shared";
+import { colors, tw } from "@shared";
 import { HomeStackParamList } from "@types";
-import { Image, ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import {
+  VictoryArea,
+  VictoryChart,
+  VictoryLabel,
+  VictoryLegend,
+  VictoryPolarAxis,
+  VictoryTheme,
+} from "victory-native";
 
 const Home = () => {
   const { top } = useSafeAreaInsets();
@@ -13,50 +22,22 @@ const Home = () => {
   const handleChangeReservation = () => {
     navigation.push("EditReservation");
   };
-  const data = [
-    // 차트에 들어갈 data를 먼저 지정해주고!
-    {
-      type: "scatterpolar", // chart type
-      r: [39, 28, 8, 7, 28, 39], // data
-      theta: ["A", "B", "C", "D", "E", "A"], // data category
-      fill: "toself", // fill option
-      name: "Group A", // data group name
-    },
-  ];
-
-  const layout = {
-    // data를 꾸며주는 layout을 지정!
-    polar: {
-      radialaxis: {
-        // 방사축이라는 의미인데 아래 그림에서 파란색으로 표시된 부분을 말한다!
-        visible: true, // 방사축 display
-        range: [0, 50], // 방사축의 시작값, 끝 값
-      },
-    },
-  };
   return (
     <ScrollView style={tw`flex-1 mt-[${top}px]`}>
-      <Image
-        style={tw`w-full h-10 resize-contain`}
-        source={require("assets/logo.png")}
+      <Header style={tw``} />
+      <Separator title="다음 진료 일정" style={tw`ml-4 mt-4`} />
+      <ReservationCard
+        style={tw`p-4`}
+        hostipal="고르다치과의원 강남점"
+        doctor="김민수"
+        state={"FINISHED"}
+        date="2. 24. 금, 오후 13:30"
+        id={90374044}
+        address="서울 강남구 강남대로 422 씨티빌딩 9층"
+        onPress={handleChangeReservation}
       />
-      <View style={tw`flex-1 p-4`}>
-        <Text style={tw`text-lg font-bold text-dark/70 my-2`}>
-          다음 진료 일정
-        </Text>
-        <ReservationCard
-          hostipal="고르다치과의원 강남점"
-          doctor="김민수"
-          state={"FINISHED"}
-          date="2. 24. 금, 오후 13:30"
-          id={90374044}
-          address="서울 강남구 강남대로 422 씨티빌딩 9층"
-          onPress={handleChangeReservation}
-        />
-        <Text style={tw`text-lg font-bold text-dark/70 mt-6`}>
-          나의 구강 상태
-        </Text>
-      </View>
+      <Separator title="종합 구강 상태" style={tw`ml-4 mt-4`} />
+      <RadialGraph style={tw`px-4`} animation={false} />
     </ScrollView>
   );
 };

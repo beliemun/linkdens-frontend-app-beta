@@ -12,7 +12,7 @@ module.exports = {
         black: "#282D32",
         dark: "#444950",
         success: "#4B7BEC",
-        error: "#e74c3c",
+        error: "#ff6b81",
         disabled: "#B7C0CF",
       },
     },

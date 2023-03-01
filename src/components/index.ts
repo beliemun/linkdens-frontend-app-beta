@@ -2,5 +2,16 @@ import ReservationCard from "./ReservationCard";
 import ReservationTitle from "./ReservationTitle";
 import HeaderLeftButton from "./HeaderLeftButton";
 import BaseButton from "./BaseButton";
+import Header from "./Header";
+import RadialGraph from "./RadialGraph";
+import Separator from "./Separator";
 
-export { ReservationCard, ReservationTitle, HeaderLeftButton, BaseButton };
+export {
+  ReservationCard,
+  ReservationTitle,
+  HeaderLeftButton,
+  BaseButton,
+  Header,
+  RadialGraph,
+  Separator,
+};

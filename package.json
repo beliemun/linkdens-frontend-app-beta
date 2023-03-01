@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npx expo start --dev-client",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web",
-    "build:dev": "eas build --profile development"
+    "android": "npx expo run:android",
+    "ios": "npx expo run:ios",
+    "web": "npx expo start --web",
+    "build:dev": "npx eas build --profile development",
+    "doctor": "npx expo-cli doctor --fix-dependencies"
   },
   "dependencies": {
     "@expo/metro-config": "^0.7.1",
@@ -15,17 +16,19 @@
     "@react-navigation/native-stack": "^6.9.12",
     "expo": "~48.0.4",
     "expo-dev-client": "~2.1.4",
+    "expo-notifications": "~0.18.1",
     "expo-splash-screen": "~0.18.1",
     "expo-status-bar": "~1.4.4",
     "moment": "^2.29.4",
     "react": "18.2.0",
     "react-native": "0.71.3",
     "react-native-calendars": "^1.1293.0",
-    "react-native-plotly": "^6.0.0",
     "react-native-safe-area-context": "^4.5.0",
     "react-native-screens": "~3.20.0",
     "react-native-svg": "13.4.0",
-    "twrnc": "^3.6.0"
+    "react-native-webview": "^11.26.1",
+    "twrnc": "^3.6.0",
+    "victory-native": "^36.6.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
