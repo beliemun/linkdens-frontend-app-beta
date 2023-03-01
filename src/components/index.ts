@@ -5,6 +5,7 @@ import BaseButton from "./BaseButton";
 import Header from "./Header";
 import RadialGraph from "./RadialGraph";
 import Separator from "./Separator";
+import UserItem from "./UserItem";
 
 export {
   ReservationCard,
@@ -14,4 +15,5 @@ export {
   Header,
   RadialGraph,
   Separator,
+  UserItem,
 };

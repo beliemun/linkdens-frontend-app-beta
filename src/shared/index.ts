@@ -4,7 +4,7 @@ import Icons from "./icons";
 import theme from "./theme";
 import { ReservationType } from "./types";
 import CalanderLocaleConfig from "./calander";
-import { AM, PM } from "./constants";
+import { AM, PM, users } from "./constants";
 import { fadeIn, scrollUp } from "./animations";
 export {
   tw,
@@ -15,6 +15,7 @@ export {
   CalanderLocaleConfig,
   AM,
   PM,
+  users,
   fadeIn,
   scrollUp,
 };

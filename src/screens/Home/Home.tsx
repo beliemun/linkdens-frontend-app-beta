@@ -1,19 +1,10 @@
-import { Header, RadialGraph, ReservationCard } from "@components";
-import Separator from "@components/Separator";
+import { Header, RadialGraph, ReservationCard, Separator } from "@components";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { colors, tw } from "@shared";
+import { tw } from "@shared";
 import { HomeStackParamList } from "@types";
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView, Text } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import {
-  VictoryArea,
-  VictoryChart,
-  VictoryLabel,
-  VictoryLegend,
-  VictoryPolarAxis,
-  VictoryTheme,
-} from "victory-native";
 
 const Home = () => {
   const { top } = useSafeAreaInsets();
@@ -37,6 +28,9 @@ const Home = () => {
         onPress={handleChangeReservation}
       />
       <Separator title="종합 구강 상태" style={tw`ml-4 mt-4`} />
+      <Text style={tw`text-5 text-secondary text-center font-bold mt-4`}>
+        구강관리 필요수준: 1단계
+      </Text>
       <RadialGraph style={tw`px-4`} animation={false} />
     </ScrollView>
   );

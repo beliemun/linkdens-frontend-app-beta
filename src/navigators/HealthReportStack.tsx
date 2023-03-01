@@ -7,7 +7,11 @@ const Stacks = createNativeStackNavigator<HealthReportStackParamList>();
 const HealthReportStack = () => {
   return (
     <Stacks.Navigator>
-      <Stacks.Screen name="HealthReport" component={HealthReport} />
+      <Stacks.Screen
+        name="HealthReport"
+        component={HealthReport}
+        options={{ title: "구강 건강 리포트" }}
+      />
     </Stacks.Navigator>
   );
 };
