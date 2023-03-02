@@ -1,11 +1,12 @@
-import tw from "./tailwind";
 import colors from "./colors";
-import Icons from "./icons";
-import theme from "./theme";
-import { ReservationType } from "./types";
 import CalanderLocaleConfig from "./calander";
-import { AM, PM, users } from "./constants";
-import { fadeIn, scrollUp } from "./animations";
+import Icons from "./icons";
+import tw from "./tailwind";
+import theme from "./theme";
+import {ReservationType} from "./types";
+import {AM, PM, users, recommends} from "./constants";
+import {fadeIn, scrollUp} from "./animations";
+import {showNofitications} from "./notifications";
 export {
   tw,
   colors,
@@ -16,6 +17,8 @@ export {
   AM,
   PM,
   users,
+  recommends,
   fadeIn,
   scrollUp,
+  showNofitications,
 };

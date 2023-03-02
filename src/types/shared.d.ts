@@ -1,6 +1,5 @@
-import { CompositeNavigationProp } from "@react-navigation/native";
-
-// type SharedStackParamList = {};
+import {CompositeNavigationProp} from "@react-navigation/native";
+import {PostType} from "@shared/types";
 
 export type HealthReportStackParamList = {
   HealthReport: undefined;
@@ -8,6 +7,10 @@ export type HealthReportStackParamList = {
 
 export type CommunityStackParamList = {
   Community: undefined;
+  Post: {
+    type: PostType;
+    index: number;
+  };
 };
 
 export type HomeStackParamList = {

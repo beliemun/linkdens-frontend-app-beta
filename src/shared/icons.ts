@@ -14,6 +14,9 @@ import PinSolid from "@icons/pin-solid.svg";
 import CopuOutline from "@icons/copy-outline.svg";
 import CheckSolid from "@icons/check-solid.svg";
 import ClockSolid from "@icons/clock-solid.svg";
+import LikeOutline from "@icons/like-outline.svg";
+import ChatOutline from "@icons/chat-outline.svg";
+import PlaySolid from "@icons/play-solid.svg";
 
 const Icons = {
   HomeOutLine,
@@ -32,6 +35,9 @@ const Icons = {
   CopuOutline,
   CheckSolid,
   ClockSolid,
+  LikeOutline,
+  ChatOutline,
+  PlaySolid,
 };
 
 export default Icons;

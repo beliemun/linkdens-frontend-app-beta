@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:LINKDENS.xcodeproj">
+      location = "group:/Users/brain.kim/Projects/linkdens-frontend-app/ios/LINKDENS.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

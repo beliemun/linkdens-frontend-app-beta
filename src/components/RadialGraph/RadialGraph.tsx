@@ -1,28 +1,21 @@
-import { colors, tw } from "@shared";
-import { View } from "react-native";
-import {
-  VictoryArea,
-  VictoryChart,
-  VictoryLabel,
-  VictoryLegend,
-  VictoryPolarAxis,
-  VictoryTheme,
-} from "victory-native";
+import {colors, tw} from "@shared";
+import {View} from "react-native";
+import {VictoryArea, VictoryChart, VictoryLabel, VictoryLegend, VictoryPolarAxis, VictoryTheme} from "victory-native";
 
 interface IRadialGraph {
   animation?: boolean;
   [key: string]: any;
 }
 
-const RadialGraph = ({ animation, ...rest }: IRadialGraph) => {
+const RadialGraph = ({animation, ...rest}: IRadialGraph) => {
   return (
     <View {...rest}>
       <View style={tw`flex-center mb-8`}>
         <VictoryChart
           polar
           theme={VictoryTheme.material}
-          domain={{ x: [0, 5], y: [0, 3] }}
-          animate={animation && { duration: 3000, easing: "bounce" }}
+          domain={{x: [0, 5], y: [0, 3]}}
+          animate={animation && {duration: 1500, easing: "bounce"}}
         >
           <VictoryLegend
             x={10}
@@ -35,22 +28,18 @@ const RadialGraph = ({ animation, ...rest }: IRadialGraph) => {
               },
             }}
             data={[
-              { name: "4개월 전(2022-11-01)", symbol: { fill: "#2DBDEF40" } },
-              { name: "1개월 전(2023-03-08)", symbol: { fill: "#2DBDEF90" } },
+              {name: "4개월 전(2022-11-01)", symbol: {fill: "#2DBDEF40"}},
+              {name: "1개월 전(2023-03-08)", symbol: {fill: "#2DBDEF90"}},
             ]}
           />
-          <VictoryArea
-            data={[1, 2, 3, 2, 1]}
-            interpolation="cardinal"
-            style={{ data: { fill: "#2DBDEF40" } }}
-          />
+          <VictoryArea data={[1, 2, 3, 2, 1]} interpolation="cardinal" style={{data: {fill: "#2DBDEF40"}}} />
           <VictoryArea
             data={[1, 1, 2, 1, 2]}
             interpolation="cardinal"
             style={{
-              data: { fill: "#2DBDEF90" },
+              data: {fill: "#2DBDEF90"},
             }}
-            labels={({ datum }) => {
+            labels={({datum}) => {
               return `위험도 ${datum._y.toFixed(1)}`;
             }}
             labelComponent={
@@ -73,8 +62,8 @@ const RadialGraph = ({ animation, ...rest }: IRadialGraph) => {
             ]}
             labelPlacement="vertical"
             style={{
-              axis: { stroke: "#282D3230", strokeWidth: 1 },
-              grid: { stroke: "#282D3230", strokeWidth: 1 },
+              axis: {stroke: "#282D3230", strokeWidth: 1},
+              grid: {stroke: "#282D3230", strokeWidth: 1},
               tickLabels: {
                 fill: colors.dark,
                 padding: 17,
