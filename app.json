@@ -7,8 +7,7 @@
     "userInterfaceStyle": "light",
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.aiobio.linkdens"
+      "supportsTablet": true
     },
     "android": {
       "package": "com.aiobio.linkdens"

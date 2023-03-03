@@ -8,11 +8,8 @@ interface IHeader {
 const Header = ({ ...rest }: IHeader) => {
   return (
     <View {...rest}>
-      <View style={tw`border-b border-b-shadow/50 py-2`}>
-        <Image
-          style={tw`w-full h-10 resize-contain`}
-          source={require("assets/logo.png")}
-        />
+      <View style={tw`pt-2`}>
+        <Image style={tw`w-full h-10 resize-contain`} source={require("assets/logo.png")} />
       </View>
     </View>
   );

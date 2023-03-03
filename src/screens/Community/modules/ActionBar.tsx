@@ -1,12 +1,12 @@
-import {Icons, tw} from "@shared";
-import {Text, View} from "react-native";
+import { Icons, tw } from "@shared";
+import { Text, View } from "react-native";
 
 interface IActionBar {
   likeCount: number;
   commentCount: number;
 }
 
-const ActionBar = ({likeCount, commentCount}: IActionBar) => {
+const ActionBar = ({ likeCount, commentCount }: IActionBar) => {
   return (
     <View style={tw`flex-row w-full justify-center mt-1.5`}>
       <View style={tw`row-center px-2 py-1 rounded-full border border-dark/50`}>

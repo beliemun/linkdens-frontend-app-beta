@@ -75,17 +75,9 @@ const RootTab = () => {
           tabBarIcon: ({ focused }) => (
             <View style={tw``}>
               {focused ? (
-                <Icons.ProfileSolid
-                  width={24}
-                  height={24}
-                  color={colors.black}
-                />
+                <Icons.PinSolid width={24} height={24} color={colors.black} />
               ) : (
-                <Icons.ProfileOutline
-                  width={24}
-                  height={24}
-                  color={colors.black}
-                />
+                <Icons.PinOutline width={24} height={24} color={colors.black} />
               )}
             </View>
           ),

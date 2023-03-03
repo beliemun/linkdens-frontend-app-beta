@@ -1,4 +1,4 @@
 import ActionBar from "./ActionBar";
-import ImageMaker from "./ImageMaker";
+import ImagesForThumnail from "../../../components/ImagesForThumnail/ImagesForThumnail";
 import PostItem from "./PostItem";
-export {ActionBar, ImageMaker, PostItem};
+export { ActionBar, ImagesForThumnail, PostItem };

@@ -14,16 +14,16 @@ export const PM = [
   "17:30",
 ];
 export const users = [
-  {name: "Floyd", description: "40대 남성", point: 96},
-  {name: "Chistopher", description: "40대 남성", point: 95},
-  {name: "Austin", description: "40대 남성", point: 94},
-  {name: "Covy", description: "40대 남성", point: 90},
-  {name: "Henry", description: "40대 남성", point: 90},
-  {name: "Jeffery", description: "40대 남성", point: 89},
-  {name: "Iker", description: "40대 남성", point: 88},
-  {name: "Dante", description: "40대 남성", point: 87},
-  {name: "Bentley", description: "40대 남성", point: 86},
-  {name: "Harvey", description: "40대 남성", point: 86},
+  { name: "Floyd", description: "40대 남성", point: 96 },
+  { name: "Chistopher", description: "40대 남성", point: 95 },
+  { name: "Austin", description: "40대 남성", point: 94 },
+  { name: "Covy", description: "40대 남성", point: 90 },
+  { name: "Henry", description: "40대 남성", point: 90 },
+  { name: "Jeffery", description: "40대 남성", point: 89 },
+  { name: "Iker", description: "40대 남성", point: 88 },
+  { name: "Dante", description: "40대 남성", point: 87 },
+  { name: "Bentley", description: "40대 남성", point: 86 },
+  { name: "Harvey", description: "40대 남성", point: 86 },
 ];
 export const posts = [
   {
@@ -79,4 +79,13 @@ export const recommends = [
     likeCount: 136,
     commentCount: 22,
   },
+];
+export const products = [
+  { name: "아이오바이오 P 치약 100g", rate: 4.5, sales: 2981, origin: 12000, price: 5900 },
+  { name: "아이오바이오 F1450 치약 100g", rate: 4.4, sales: 681, origin: 12000, price: 5900 },
+  { name: "아이오바이오 W 치약 100g", rate: 4.8, sales: 121, origin: 20000, price: 9900 },
+  { name: "아이오바이오 P+F1450+W 치약 SET", rate: 4.9, sales: 281, origin: 44000, price: 19900 },
+  { name: "아이오바이오 미니 P 치약 20g 20개 SET", rate: 4.6, sales: 181, origin: 60000, price: 28900 },
+  { name: "아이오바이오 휴대용 칫솔 SET", rate: 4.5, sales: 125, origin: 9000, price: 3900 },
+  { name: "아이오바이오 휴대용 칫솔 SET + 미니 P치약 20개x3", rate: 4.5, sales: 125, origin: 20000, price: 7900 },
 ];

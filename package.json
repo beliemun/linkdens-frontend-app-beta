@@ -7,7 +7,7 @@
     "ios": "npx expo run:ios",
     "web": "npx expo start --web",
     "build:dev": "npx eas build --profile development",
-    "build:ios": "npx eas build --profile preview --local",
+    "build:ios": "npx eas build --profile preview --platform ios --local",
     "doctor": "npx expo-cli doctor --fix-dependencies"
   },
   "dependencies": {

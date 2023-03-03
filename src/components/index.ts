@@ -6,6 +6,8 @@ import Header from "./Header";
 import RadialGraph from "./RadialGraph";
 import Separator from "./Separator";
 import UserItem from "./UserItem";
+import ImagesForThumnail from "./ImagesForThumnail";
+import ImagesForProduct from "./ImagesForProduct";
 
 export {
   ReservationCard,
@@ -16,4 +18,6 @@ export {
   RadialGraph,
   Separator,
   UserItem,
+  ImagesForThumnail,
+  ImagesForProduct,
 };
