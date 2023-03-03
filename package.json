@@ -8,6 +8,7 @@
     "web": "npx expo start --web",
     "build:dev": "npx eas build --profile development",
     "build:ios": "npx eas build --profile preview --platform ios --local",
+    "build:apk": "npx eas build -p android --local --profile development",
     "doctor": "npx expo-cli doctor --fix-dependencies"
   },
   "dependencies": {

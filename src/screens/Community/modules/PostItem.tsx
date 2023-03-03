@@ -1,5 +1,5 @@
-import {tw} from "@shared";
-import {Text, Touchable, TouchableOpacity, View} from "react-native";
+import { tw } from "@shared";
+import { Text, Touchable, TouchableOpacity, View } from "react-native";
 import ActionBar from "./ActionBar";
 
 interface IPostItem {
@@ -11,7 +11,7 @@ interface IPostItem {
   onPress?: () => void;
 }
 
-const PostItem = ({title, desciption, likeCount, commentCount, children, onPress}: IPostItem) => {
+const PostItem = ({ title, desciption, likeCount, commentCount, children, onPress }: IPostItem) => {
   return (
     <TouchableOpacity style={tw`col-center w-50 m-1 mb-6`} onPress={onPress}>
       {children}
