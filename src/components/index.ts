@@ -8,6 +8,7 @@ import Separator from "./Separator";
 import UserItem from "./UserItem";
 import ImagesForThumnail from "./ImagesForThumnail";
 import ImagesForProduct from "./ImagesForProduct";
+import LineGraph from "./LineGraph";
 
 export {
   ReservationCard,
@@ -20,4 +21,5 @@ export {
   UserItem,
   ImagesForThumnail,
   ImagesForProduct,
+  LineGraph,
 };

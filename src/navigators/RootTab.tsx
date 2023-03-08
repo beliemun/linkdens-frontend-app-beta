@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icons from "@shared/icons";
 import { colors, tw } from "@shared";
-import { RootStackParamList } from "@types";
+import { RootTabParamList } from "@types";
 import CommunityStack from "./CommunityStack";
 import HealthReportStack from "./HealthReportStack";
 import HomeStack from "./HomeStack";
@@ -9,7 +9,7 @@ import ProfileStack from "./ProfileStack";
 import StoreStack from "./StoreStack";
 import { View } from "react-native";
 
-const Tabs = createBottomTabNavigator<RootStackParamList>();
+const Tabs = createBottomTabNavigator<RootTabParamList>();
 
 const RootTab = () => {
   return (

@@ -7,7 +7,7 @@ const Store = () => {
   return (
     <ScrollView>
       <Image style={tw`w-full h-70`} source={require("assets/p0.png")} resizeMode="cover" />
-      <Text style={tw`text-lg text-secondary pt-4 text-center font-bold mb-1`}>"치주질환 관리를 위한 추천 상품"</Text>
+      <Text style={tw`text-lg text-secondary pt-4 text-center font-bold mb-1`}>"치주질환 개선을 위한 추천 상품"</Text>
       <Text style={tw`text-5 text-dark pt-2 text-center font-bold mb-1`}>아이오바이오 F1450 고불소 치약</Text>
       <Text style={tw`mx-4 text-lg text-dark my-2`}>
         효과적인 충치 예방을 위해 국내외 기준에 맞춘 불소 함유량 1450ppm의 불소치약입니다. 초기 충치의 회복 효과가

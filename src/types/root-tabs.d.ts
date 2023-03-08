@@ -10,11 +10,11 @@ import {
 } from "./shared";
 
 export type RootTabParamList = {
-  HealthReportTab: undefined;
-  CommunityTab: undefined;
-  HomeTab: undefined;
-  StoreTab: undefined;
-  ProfileTab: undefined;
+  HealthReportStack: undefined;
+  CommunityStack: undefined;
+  HomeStack: undefined;
+  StoreStack: undefined;
+  ProfileStack: undefined;
 };
 
 export type HealthReportStackNavigationProp = CompositeNavigationProp<

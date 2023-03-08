@@ -1,9 +1,11 @@
-import { Header, RadialGraph, ReservationCard, Separator } from "@components";
+import { Header, ReservationCard, Separator } from "@components";
+import StackGraph from "@components/StackGraph/StackGraph";
+import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { showNofitications, tw } from "@shared";
 import { getNotificationPermisssion } from "@shared/permissions";
-import { HomeStackParamList } from "@types";
+import { HomeStackParamList, RootTabParamList } from "@types";
 import { useEffect } from "react";
 import { Alert, ScrollView, Text, TouchableOpacity } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -11,6 +13,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 const Home = () => {
   const { top } = useSafeAreaInsets();
   const navigation = useNavigation<NativeStackNavigationProp<HomeStackParamList>>();
+  const rootNavigation = useNavigation<BottomTabNavigationProp<RootTabParamList>>();
   const handleChangeReservation = () => {
     Alert.alert("예약 변경", "예약을 변경하시겠습니까?", [
       { text: "취소", style: "cancel" },
@@ -44,9 +47,16 @@ const Home = () => {
         address="서울 강남구 강남대로 422 씨티빌딩 9층"
         onPress={handleChangeReservation}
       />
-      <Separator title="종합 구강 상태" style={tw`ml-4 mt-4`} />
-      <Text style={tw`text-5 text-secondary text-center font-bold mt-4`}>구강관리 필요수준: 1단계</Text>
-      <RadialGraph style={tw`px-4`} animation={false} />
+      <Separator title="구강 관리도" style={tw`ml-4 mt-4`} />
+      <Text style={tw`text-5 text-secondary text-center font-bold mt-4`}>구강 관리 위험도: 3</Text>
+      <Text style={tw`text-4 text-secondary text-center font-bold mt-2`}>가까운 병원에서 3개월 내에 검진받으세요.</Text>
+      <TouchableOpacity
+        style={tw`px-6 py-3 bg-secondary rounded-full self-center mt-4`}
+        onPress={() => rootNavigation.navigate("ProfileStack")}
+      >
+        <Text style={tw`text-5 text-white`}>가까운 Qray 클리닉 찾기</Text>
+      </TouchableOpacity>
+      <StackGraph animation={false} />
     </ScrollView>
   );
 };

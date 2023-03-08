@@ -1,5 +1,5 @@
 import {
-  RootStackParamList,
+  RootTabParamList,
   HealthReportStackNavigationProp,
   CommunityStackNavigationProp,
   HomeStackNavigationProp,
@@ -16,7 +16,7 @@ import {
 } from "./shared";
 
 export {
-  type RootStackParamList,
+  type RootTabParamList,
   type HealthReportStackNavigationProp,
   type CommunityStackNavigationProp,
   type HomeStackNavigationProp,

@@ -12,7 +12,7 @@ const Community = () => {
   return (
     <ScrollView>
       <Text style={tw`text-5 text-white bg-secondary py-2 text-center font-bold mb-1`}>
-        "치주질환 관리를 위한 추천 콘텐츠"
+        "치주질환 개선을 위한 추천 콘텐츠"
       </Text>
       <View style={tw`row-center flex-wrap`}>
         {recommends.map((post, index) => (
