@@ -28,9 +28,9 @@ const HealthReport = () => {
       <LineGraph />
 
       <Separator title="구강 관리도" style={tw`ml-4 mt-4`} />
-      <Text style={tw`text-5 text-secondary text-center font-bold mt-4`}>구강관리 점수: 3</Text>
+      <Text style={tw`text-5 text-secondary text-center font-bold mt-4`}>구강관리도: 2점</Text>
       <Text style={tw`text-4 text-secondary text-center font-bold mt-4 mx-4`}>
-        {"구강관리도 3점의 경우, 3개월 후 치과 방문이 필요합니다.\n(최근 진료부터 17일 남음)"}
+        {"4개월 후 치과 방문이 필요합니다.\n(최근 진료부터 17일 남음)"}
       </Text>
       <StackGraph animation={false} />
 
