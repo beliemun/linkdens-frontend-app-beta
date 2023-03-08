@@ -48,15 +48,15 @@ const Home = () => {
         onPress={handleChangeReservation}
       />
       <Separator title="구강 관리도" style={tw`ml-4 mt-4`} />
-      <Text style={tw`text-5 text-secondary text-center font-bold mt-4`}>구강 관리 위험도: 3</Text>
-      <Text style={tw`text-4 text-secondary text-center font-bold mt-2`}>가까운 병원에서 3개월 내에 검진받으세요.</Text>
+      <StackGraph animation={false} />
+      <Text style={tw`text-5 text-secondary text-center font-bold mt-4`}>구강관리 점수: 3</Text>
+      <Text style={tw`text-4 text-secondary text-center font-bold mt-4`}>가까운 병원에서 3개월 내에 검진받으세요.</Text>
       <TouchableOpacity
-        style={tw`px-6 py-3 bg-secondary rounded-full self-center mt-4`}
+        style={tw`px-6 py-3 bg-secondary rounded-full self-center my-4`}
         onPress={() => rootNavigation.navigate("ProfileStack")}
       >
         <Text style={tw`text-5 text-white`}>가까운 Qray 클리닉 찾기</Text>
       </TouchableOpacity>
-      <StackGraph animation={false} />
     </ScrollView>
   );
 };
