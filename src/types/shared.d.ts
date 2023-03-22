@@ -1,8 +1,9 @@
-import {CompositeNavigationProp} from "@react-navigation/native";
-import {PostType} from "@shared/types";
+import { CompositeNavigationProp } from "@react-navigation/native";
+import { PostType } from "@shared/types";
 
 export type HealthReportStackParamList = {
   HealthReport: undefined;
+  Viewer: undefined;
 };
 
 export type CommunityStackParamList = {

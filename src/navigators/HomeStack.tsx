@@ -8,11 +8,7 @@ const Stacks = createNativeStackNavigator<HomeStackParamList>();
 const HomeStack = () => {
   return (
     <Stacks.Navigator>
-      <Stacks.Screen
-        name="Home"
-        component={Home}
-        options={{ headerShown: false }}
-      />
+      <Stacks.Screen name="Home" component={Home} options={{ headerShown: false }} />
       <Stacks.Screen
         name="EditReservation"
         component={EditReservation}
